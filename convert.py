@@ -5,7 +5,7 @@ import re
 sources = open("sources.txt").read().splitlines()
 
 channels=[]
-id=1
+id_counter=1
 
 def detect_type(stream):
 
@@ -24,28 +24,20 @@ def detect_type(stream):
     return "Live"
 
 
-def is_alive(url):
-
-    try:
-        r=requests.head(url,timeout=5)
-        return r.status_code<400
-    except:
-        return False
-
-
 for src in sources:
 
     print("Loading:",src)
 
-    r=requests.get(src)
-    lines=r.text.splitlines()
+    try:
+        r=requests.get(src,timeout=10)
+        lines=r.text.splitlines()
+    except:
+        continue
 
-    playlist_name=src.split("/")[-1].replace(".m3u","")
+    category=src.split("/")[-1].replace(".m3u","")
 
     name=""
     logo=""
-    backup=""
-    category=playlist_name
 
     for line in lines:
 
@@ -60,26 +52,20 @@ for src in sources:
             else:
                 logo="https://upload.wikimedia.org/wikipedia/commons/7/75/Video_icon.svg"
 
-
         elif line.startswith("http"):
-
-            stream=line.strip()
-
-            if not is_alive(stream):
-                continue
 
             channels.append({
 
-                "id":str(id),
+                "id":str(id_counter),
                 "name":name,
                 "logo":logo,
-                "stream":stream,
+                "stream":line.strip(),
                 "category":category,
-                "type":detect_type(stream)
+                "type":detect_type(line)
 
             })
 
-            id+=1
+            id_counter+=1
 
 
 with open("channels.json","w") as f:
