@@ -1,33 +1,34 @@
-name: Update JSON
+name: JSON Generator
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
 
     steps:
 
-    - name: Checkout repo
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: "3.x"
 
-    - name: Install requests
+    - name: Install dependencies
       run: pip install requests
 
     - name: Run converter
       run: python convert.py
 
-    - name: Commit changes
+    - name: Commit JSON
       run: |
-        git config --global user.name "bot"
+        git config --global user.name "iptv-bot"
         git config --global user.email "bot@github.com"
         git add channels.json
         git commit -m "Auto update IPTV JSON"
