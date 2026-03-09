@@ -1,0 +1,4 @@
+https://github.com/sunilprregmi/hera-api/raw/main/ott_gs.m3u
+https://github.com/sunilprregmi/hera-api/raw/main/ratv.m3u
+https://github.com/sunilprregmi/hera-api/raw/main/yupptv.m3u
+https://github.com/sunilprregmi/hera-api/raw/main/waves_pb.m3u
