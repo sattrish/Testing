@@ -1,0 +1,87 @@
+[
+ {
+  "id": "1",
+  "name": "HLS Live Channel",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Video_icon.svg",
+  "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+  "category": "HLS"
+ },
+
+ {
+  "id": "2",
+  "name": "HLS Backup Channel",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Video_icon.svg",
+  "stream": "https://test-streams.mux.dev/test_001/stream.m3u8",
+  "backup": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+  "category": "Backup"
+ },
+
+ {
+  "id": "3",
+  "name": "DASH MPD Channel",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dash_logo.png",
+  "stream": "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd",
+  "category": "DASH"
+ },
+
+ {
+  "id": "4",
+  "name": "MP4 Video Channel",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Video_icon.svg",
+  "stream": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  "category": "MP4"
+ },
+
+ {
+  "id": "5",
+  "name": "TS Stream Channel",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Video_icon.svg",
+  "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+  "category": "TS"
+ },
+
+ {
+  "id": "6",
+  "name": "Widevine DRM Demo",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dash_logo.png",
+  "stream": "https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd",
+  "license": "https://proxy.uat.widevine.com/proxy",
+  "category": "DRM"
+ },
+
+ {
+  "id": "7",
+  "name": "ClearKey DRM Structure",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dash_logo.png",
+  "stream": "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd",
+  "key": "YWJjZGVmMTIzNDU2Nzg5MGFiY2RlZjEyMzQ1Njc4OTA",
+  "keyid": "MTIzNDU2Nzg5MGFiY2RlZjEyMzQ1Njc4OTA",
+  "category": "ClearKey"
+ },
+
+ {
+  "id": "8",
+  "name": "Token Stream Example",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Video_icon.svg",
+  "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8?token=demo",
+  "category": "Token"
+ },
+
+ {
+  "id": "9",
+  "name": "Multi Backup Stream",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Video_icon.svg",
+  "stream": "https://test-streams.mux.dev/test_002/stream.m3u8",
+  "backup": "https://test-streams.mux.dev/test_003/stream.m3u8",
+  "backup2": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+  "category": "Backup"
+ },
+
+ {
+  "id": "10",
+  "name": "Movie HLS Channel",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Sintel_poster.jpg",
+  "stream": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+  "category": "Movies"
+ }
+]
